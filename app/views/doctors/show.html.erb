@@ -4,6 +4,6 @@
 </p>
 Appointments:
   <% @doctor.appointments.each do |appointment| %>
-    <%= link_to appointment.patient.name, user_path(appointment.name) %>
+    <%= link_to appointment.patient.name, appointment_path(appointment.name) %>
     <%= appointment.name %>
   <% end %>
