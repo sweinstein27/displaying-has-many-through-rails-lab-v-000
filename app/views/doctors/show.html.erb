@@ -2,8 +2,8 @@
 <p>
   Department: <%= @doctor.department %>
 </p>
-Comments:
-  <% @post.comments.each do |comment| %>
-    <%= link_to comment.user.username, user_path(comment.user) %> said
-    <%= comment.content %>
+Appointments:
+  <% @doctor.appointments.each do |appointment| %>
+    <%= link_to appointment.patient.name, user_path(appointment.name) %>
+    <%= appointment.name %>
   <% end %>
